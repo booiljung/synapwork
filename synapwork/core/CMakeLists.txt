@@ -3,15 +3,17 @@ project(core)
 
 set(
     headers
-    ndarray.h
+    sn_ndarray.h
 )
 
 add_library(
-    sn STATIC
-    ndarray.c
+    synapwork STATIC
+    sn_allocations.c
+    sn_devices.c    
+    sn_ndarray.c
 )
 
 add_definitions(-Wall -O2)
 
-install(TARGETS sn DESTINATION lib)
+install(TARGETS synapwork DESTINATION lib)
 install(FILES headers DESTINATION include)

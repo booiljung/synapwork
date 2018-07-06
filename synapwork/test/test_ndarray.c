@@ -1,4 +1,4 @@
-#include "../core/ndarray.h"
+#include "../core/sn_ndarray.h"
 
 sn_result test_ndarray() {
 

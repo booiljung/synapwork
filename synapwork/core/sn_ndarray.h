@@ -1,4 +1,13 @@
-#pragma once
+/*
+
+	Synetse
+
+	July. 7th. 2017
+
+	MIT license
+
+*/
+
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,14 +43,21 @@ typedef double		sn_float64;
 extern const char* sn_type_cstrs[];
 extern const char* sn_type_to_cstr(int sn_type);
 
-typedef struct sn_ndarray {
+typedef struct _sn_ndarray {
 	int type;		// sn_type_*
 	int where;		// sn_where_*
-	void *host;		// array of sn_* in host memory
-	void *device;	// array of sn_* in device memory
+	long long len;	// data length
+	void *host;		// data in host memory
+	void *device;	// data in device memory
 	int dim;		// available array dimension
 	int shapes[64];	// array shapes
 } sn_ndarray;
+
+extern sn_ndarray* sn_allocate();
+extern void sn_free(sn_ndarray* arr);
+
+extern int sn_dimensions(sn_ndarray *arr);
+extern int sn_where(sn_ndarray *arr);
 
 #ifdef __cplusplus
 } // extern "C"

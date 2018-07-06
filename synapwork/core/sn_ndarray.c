@@ -1,4 +1,4 @@
-#include "./ndarray.h"
+#include "./sn_ndarray.h"
 
 const char* sn_type_cstrs[] = {
 	"nonetype",

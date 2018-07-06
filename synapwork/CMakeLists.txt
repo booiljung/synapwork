@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.12)
-project(synapsenetc)
+project(synapwork)
 
-set(CPACK_PACKAGE_NAME "synapsenetc")
+set(CPACK_PACKAGE_NAME "synapwork")
 set(CPACK_PACKAGE_VERSION_MAJOR "0")
 set(CPACK_PACKAGE_VERSION_MINOR "1")
 set(CPACK_PACKAGE_VERSION_PATCH "0")
@@ -12,6 +12,7 @@ if (NOT TARGET synapsenetc)
    message(STATUS "Compiling synapsenetc version: ${VERSION}")
 endif()
 
+add_subdirectory(containers)
 add_subdirectory(core)
 add_subdirectory(test)
 add_subdirectory(cpy)

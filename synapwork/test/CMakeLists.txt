@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 2.8.12)
-project(test)
+project(sn_test)
 
 add_executable(
-    test
-    ndarray_test.c
+    sn_test
+    test_ndarray.c
     test.c
 )
+
