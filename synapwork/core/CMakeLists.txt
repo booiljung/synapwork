@@ -3,14 +3,14 @@ project(core)
 
 set(
     headers
-    sn_ndarray.h
+    sn_ndarray.hpp
 )
 
 add_library(
     synapwork STATIC
-    sn_allocations.c
-    sn_devices.c    
-    sn_ndarray.c
+    sn_allocations.cpp
+    sn_devices.cpp
+    sn_ndarray.cpp
 )
 
 add_definitions(-Wall -O2)

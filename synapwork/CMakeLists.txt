@@ -12,7 +12,6 @@ if (NOT TARGET synapsenetc)
    message(STATUS "Compiling synapsenetc version: ${VERSION}")
 endif()
 
-add_subdirectory(containers)
 add_subdirectory(core)
 add_subdirectory(test)
 add_subdirectory(cpy)

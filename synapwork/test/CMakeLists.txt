@@ -3,7 +3,7 @@ project(sn_test)
 
 add_executable(
     sn_test
-    test_ndarray.c
-    test.c
+    test_ndarray.cpp
+    test.cpp
 )
 
