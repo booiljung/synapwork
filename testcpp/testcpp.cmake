@@ -4,9 +4,10 @@ set(dir testcpp/)
 
 set(
     test_srcs
-    ${dir}test_ndarray.cpp
-    ${dir}test_types.cpp
-    ${dir}test.cpp
+    ${dir}test_sn.cpp
+    ${dir}test_sn_devices.cpp
+    ${dir}test_sn_ndarray.cpp
+    ${dir}test_sn_types.cpp
 )
 
 

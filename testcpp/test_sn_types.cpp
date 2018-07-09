@@ -8,30 +8,20 @@
  */
 
 #include <assert.h>
-
 #include <iostream>
-
 #include "../synapworkcpp/core/sn_types.hpp"
 
 using namespace std;
 using namespace sn;
 
-namespace sntest
-{
+namespace testsn {
 
-
-	bool test_types()
-	{
+	bool test_types() {
 		cout << "test_types" << endl;
 		for (int typenum = 0; typenum < type_max; typenum++)
-		{
-			const char *cs = type_to_cstr(typenum);
-			cout << cs << " ";
-		}
+			cout  << "    " << type_to_cstr(typenum);
 		cout << endl;
 		return true;
 	}
 
-
-} // sn
-
+} // testsn

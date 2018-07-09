@@ -7,43 +7,43 @@
  * 
  */
 
-#include <vector>
+#pragma once
 
 #include "./sn_types.hpp"
 #include "./sn_devices.hpp"
 #include "./sn_devbuffer.hpp"
 
+
 namespace sn
 {
 
-	typedef std::vector<int> shapes;
+	typedef std::vector<int> shape_t;
 
-
-
-
-	typedef int cshape[];
-
+	/**
+	 * @brief c형식의 shape 전달자.
+	 * @details [0]은 dimension, 이후는 각 차원의 길이. 차원의 순서는 numpy와 동일.
+	 */
+	typedef int cshape_t[];
 
 	template <typename T>
-	class ndarray
-	{
+	class ndarray_t {
 	private:
-		shapes _shapes;
-		devbuffers<T> _devbuffers;
+		shape_t _shape;
+		devbuffers_t<T> _devbuffers;
 
 	public:
-		ndarray() { }
-		ndarray(cshape shape) { }
-		ndarray(cshape shape, T value) { }
+		ndarray_t() { }
+		ndarray_t(cshape_t cshape) { }
+		ndarray_t(cshape_t cshape, T value) { }
 
 	public:
-		static ndarray* values(cshape shape);
-		static ndarray* values(cshape shape, T value);
+		static ndarray_t* values(cshape_t cshape);
+		static ndarray_t* values(cshape_t cshape, T value);
 
 	public:
-		static ndarray* ones(cshape shape);
-		static ndarray* zeros(cshape shape);
-
+		static ndarray_t* ones(cshape_t cshape);
+		static ndarray_t* zeros(cshape_t cshape);
 	};
+	
+} // sn
 
-}

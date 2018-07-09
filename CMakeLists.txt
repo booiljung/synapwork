@@ -8,6 +8,8 @@ endif()
 
 set(root_dir)
 
+add_definitions(-Wall -std=c++0x)
+
 include(${root_dir}synapworkcpp/synapworkcpp.cmake)
 add_library(synapwork STATIC ${sources})
 

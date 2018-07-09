@@ -19,5 +19,6 @@ set(headers)
 set(synapworkcpp_dir synapworkcpp/)
 
 include(${synapworkcpp_dir}core/core.cmake)
+include(${synapworkcpp_dir}utils/utils.cmake)
 include(${synapworkcpp_dir}cpy/cpy.cmake)
 

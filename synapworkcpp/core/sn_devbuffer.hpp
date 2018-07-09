@@ -9,20 +9,18 @@
 
 #include <vector>
 
-namespace sn
-{
+namespace sn {
 
 	template <typename T>
-	class devbuffer
-	{
+	class devbuffer_t {
 
 	};
 
 
 	template <typename T>
-	class devbuffers : std::vector<devbuffer<T>*>
-	{
+	class devbuffers_t : std::vector<devbuffer_t<T>*> {
 
 	};
 
 }
+

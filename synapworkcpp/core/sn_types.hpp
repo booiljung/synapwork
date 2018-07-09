@@ -7,15 +7,14 @@
  * 
  */
 
-namespace sn
-{
+namespace sn {
 
 	typedef char		int8;
 	typedef short		int16;
 	typedef int			int32;
 	typedef long long	int64;
-	typedef char		float8;       // cpu does not support float8
-	typedef short		float16;      // cpu does not support float16
+	typedef char		float8; // cpu does not support float8
+	typedef short		float16; // cpu does not support float16
 	typedef float		float32;
 	typedef double		float64;
 
@@ -28,11 +27,12 @@ namespace sn
 	extern const int type_float16;
 	extern const int type_float32;
 	extern const int type_float64;
-	#define sn_type_max 9
 	extern const int type_max;
 
 	extern const char* type_cstrs[];
 	extern const char* type_to_cstr(const int sn_type);
-	
-} // namespace sn
+
+	#define ccount(arr)		(sizeof(arr)/sizeof((arr)[0]))
+
+} // sn
 

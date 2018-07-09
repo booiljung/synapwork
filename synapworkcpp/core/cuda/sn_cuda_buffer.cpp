@@ -9,21 +9,20 @@
 
 #include <cuda_runtime.h>
 
-
-namespace sn
-{
+#include "../sn_types.hpp"
 
 
-	void* cuda_malloc(long long size)
-	{
+namespace sn {
+
+
+	void* cuda_malloc(size_t size) {
 		void *buffer;
 		cudaMalloc((void**)&buffer, size);
 		return buffer;
 	}
 
 
-	void cuda_free(void *buffer)
-	{
+	void cuda_free(void *buffer) {
 		cudaFree(buffer);
 	}
 

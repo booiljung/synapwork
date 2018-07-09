@@ -11,16 +11,13 @@
 
 using namespace sn;
 
-namespace sntest
-{
+namespace testsn {
 
 	bool test_ndarray() {
-
-		ndarray<float32> *arr = new ndarray<float32>();
-
+		//ndarray_t<float32> *arr = new ndarray_t<float32>();
 		return true;
 	}
 
-} // sntest
+} // testsn
 
 

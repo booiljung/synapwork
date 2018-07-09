@@ -7,21 +7,32 @@
  * 
  */
 
+#pragma once
+
+#include <map>
+#include <set>
 #include <string>
+#include "./sn_device.hpp"
+#include "./sn_types.hpp"
 
-namespace sn
-{
+using namespace std;
 
-	class device
-	{
+namespace sn {
+
+	class devices_t {
 	private:
-		std::string _name;
+		set<device_t*> _devices;
+		map<string, device_t*> _names;
 
 	public:
-		void (*allocate)();
-		void (*free)(void *buffer);
-		void (*lock)(void *buffer);
-		void (*unlock)(void *buffer);
+		void register_device(device_t* device);
+		void unregister_device(device_t* device);
+		bool has_named_device(const string& name);
+		device_t* named_device(const string& name);
 	};
 
-}
+
+	extern devices_t devices;
+
+
+} // sn
