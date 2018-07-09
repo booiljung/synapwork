@@ -1,12 +1,11 @@
-/*
-
-	Synetse
-
-	July. 7th. 2017
-
-	MIT license
-
-*/
+/**
+ * Synapwork
+ * July. 7th. 2018
+ * MIT license
+ * 
+ * 
+ * 
+ */
 
 #include <vector>
 
